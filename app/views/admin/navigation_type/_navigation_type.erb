@@ -1,0 +1,7 @@
+<%= error_messages_for :navigationTypeNew %>
+<% form_for :navigationTypeNew, @navigationType, :url => { :action => doAction, :id => params[:id]} do |form|%>
+    <%= form.label :name %>
+    <%= form.text_field :name %>   
+  <br/>
+    <%= form.submit submitText %>
+<%end%>
