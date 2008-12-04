@@ -17,7 +17,7 @@ class NavigationTypeExtension < Radiant::Extension
   end
   
   def deactivate
-    # admin.tabs.remove "Navigation Type"
+    admin.tabs.remove "Navigation Type"
   end
   
 end
