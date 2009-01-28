@@ -4,14 +4,16 @@
 class NavigationTypeExtension < Radiant::Extension
   version "1.0"
   description "Describe your extension here"
-  url "http://yourwebsite.com/navigation_type"
+  url "http://www.screenconcept.ch"
   
   define_routes do |map|
-     map.connect 'admin/navigation_type/:action', :controller => 'admin/navigation_type'
-   end
+    map.namespace :admin, :member => { :remove => :get } do |admin|
+      admin.resources :navigation_types
+    end
+  end
   
   def activate
-    admin.tabs.add "Navigation Type", "/admin/navigation_type", :after => "Layouts", :visibility => [:all]
+    admin.tabs.add "Navigation Type", "/admin/navigation_types", :after => "Layouts", :visibility => [:all]
     admin.page.edit.add :parts_bottom, "navigationType", :after  => 'edit_layout_and_type' 
     Page.send :include,  NavigationTypeTags
   end
