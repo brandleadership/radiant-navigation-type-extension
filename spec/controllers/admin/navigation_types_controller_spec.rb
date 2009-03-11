@@ -1,7 +1,8 @@
 require File.dirname(__FILE__) + '/../../spec_helper'
 
-describe Admin::NavigationTypeController do
-  scenario :users
+describe Admin::NavigationTypesController do
+
+  dataset :users
   
   before :each do
     login_as :existing
