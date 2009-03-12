@@ -3,7 +3,7 @@
 
 class NavigationTypeExtension < Radiant::Extension
   version "1.0"
-  description "Describe your extension here"
+  description "Helps to alocate pages to a naviagation"
   url "http://www.screenconcept.ch"
   
   define_routes do |map|
